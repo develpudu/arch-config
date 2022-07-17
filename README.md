@@ -2,7 +2,7 @@
 ![](https://img.shields.io/github/stars/develpudu/arch-config?label=Stars)
 ![](https://img.shields.io/github/forks/develpudu/arch-config?label=Forks)
 
-### Introduction
+## Introduction
 [arch-config](https://github.com/develpudu/arch-config) is a **bash script** that boostraps **Arch Linux** and configures it:
 1. BTRFS bootable snapshots from GRUB
 2. LUKS2 encryption
@@ -10,7 +10,7 @@
 4. [systemd-oomd](https://fedoraproject.org/wiki/Changes/EnableSystemdOomd)
 5. Autodetect VMs and provide guest tools (if available)
 
-### How does it work?
+## How does it work?
 1. Download an Arch Linux ISO from [here](https://archlinux.org/download/)
 2. Flash the ISO onto an [USB Flash Drive](https://wiki.archlinux.org/index.php/USB_flash_installation_medium)
 3. Boot the live environment
@@ -26,7 +26,7 @@ Long version:
 bash <(curl -s https://raw.githubusercontent.com/develpudu/arch-config/master/install.sh)
 ```
 
-### Partitions layout 
+## Partitions layout 
 
 The **partitions layout** is simple and it consists of only two partitions:
 1. A **FAT32** partition (512MiB), mounted at `/boot/` as ESP.
@@ -37,7 +37,7 @@ The **partitions layout** is simple and it consists of only two partitions:
 | 1                | ESP       | 512 MiB           | /boot/         | FAT32                   |
 | 2                | Cryptroot | Rest of the disk  | /              | BTRFS Encrypted (LUKS2) |
 
-### BTRFS subvolumes layout
+## BTRFS subvolumes layout
 
 The **BTRFS subvolumes layout** follows the traditional and suggested layout used by **Snapper**, you can find it [here](https://wiki.archlinux.org/index.php/Snapper#Suggested_filesystem_layout).
 
@@ -52,7 +52,13 @@ The **BTRFS subvolumes layout** follows the traditional and suggested layout use
 | 7                | @var_pkgs      | /var/cache/pacman/pkg         |
 
 
-### Reference
+## Video
+
+Arch Linux base installation.
+
+[![asciicast](https://asciinema.org/a/444025.png)](https://asciinema.org/a/444025)
+
+## Reference
 - [easy-arch](https://github.com/classy-giraffe/easy-arch)
 - [eoli3n/arch-config](https://github.com/eoli3n/arch-config)
 - [alis](https://github.com/picodotdev/alis)
